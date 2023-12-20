@@ -16,14 +16,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid 10px #2F4238;
+  border: solid 6px #2F4238;
   padding: 5px;
 }
 
 /** adpt content to the view point, now horizontal scroll bar */
 #content {
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 20px;
   width: 100%;
   max-width: 800px;
 }
@@ -64,22 +64,22 @@ button:hover {
 
 .form-control textarea {
   width: 100%;
-  padding: 5px;
+  padding: 3px;
 }
 
 .form-control button {
   width: 100%;
-  padding: 5px;
+  padding: 2px;
 }
 
 .form-group input {
   width: 100%;
-  padding: 5px;
+  padding: 3px;
 }
 
 .form-group button {
   width: 100%;
-  padding: 5px;
+  padding: 3px;
 }
 
 .form-group button:active {
@@ -140,7 +140,7 @@ footer {
   font-size: 12px;
   color: #2a2929;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   width: 100%;
   text-align: center;
   left: 50%;

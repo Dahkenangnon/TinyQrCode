@@ -134,7 +134,6 @@ app.on('before-quit', () => {
 
 // Don't forget to unregister the shortcut when the app is about to quit
 app.on('will-quit', () => {
-    globalShortcut.unregisterAll();
 });
 
 
