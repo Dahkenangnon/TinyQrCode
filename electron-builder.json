@@ -1,0 +1,92 @@
+{
+  "appId": "com.dah-kenangnon.qr_cod_office",
+  "productName": "QrCodOffice",
+  "directories": {
+    "output": "build/output",
+    "app": "./",
+    "buildResources": "extraResources"
+  },
+  "extraResources": [
+    "extraResources/",
+    "LICENSE"
+  ],
+  "publish": [
+    {
+      "provider": "github",
+      "owner": "Dahkenangnon",
+      "repo": "QrCodOffice",
+      "private": true,
+      "token": "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"
+    }
+  ],
+  "artifactName": "${productName}-${os}-${arch}-${version}.${ext}",
+  "files": [
+    "package.json",
+    "src/.",
+    "node_modules"
+  ],
+  "mac": {
+    "target": "dmg",
+    "category": "public.app-category.business",
+    "icon": "build/icons/icon.icns",
+    "darkModeSupport": true,
+    "type": "distribution",
+    "extraDistFiles": [
+      "extraResources/",
+      "LICENSE"
+    ]
+  },
+  "dmg": {
+    "background": "build/img/bg.png",
+    "icon": "build/icons/icon.icns",
+    "iconSize": 100,
+    "title": "QrCodOffice",
+    "contents": [
+      {
+        "x": 410,
+        "y": 150,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 130,
+        "y": 150,
+        "type": "file"
+      }
+    ],
+    "window": {
+      "width": 600,
+      "height": 400
+    }
+  },
+  "nsis": {
+    "oneClick": true,
+    "packElevateHelper": false,
+    "allowToChangeInstallationDirectory": false,
+    "allowElevation": false,
+    "installerIcon": "build/icons/icon.ico",
+    "uninstallerIcon": "build/icons/icon.ico",
+    "uninstallDisplayName": "${productName} ${version}",
+    "license": "build/license/eula.html",
+    "runAfterFinish": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "preCompressedFileExtensions": [
+    ]
+  },
+  "win": {
+    "target": "nsis",
+    "legalTrademarks": "JustineOffice",
+    "icon": "build/icons/icon.ico",
+    "publisherName": "Justin Dah-kenangnon",
+    "verifyUpdateCodeSignature": false
+  },
+  "linux": {
+    "target": [
+      "AppImage"
+    ],
+    "icon": "build/icons/512x512.png",
+    "category": "Utility",
+    "executableName": "QrCodOffice"
+  }
+}

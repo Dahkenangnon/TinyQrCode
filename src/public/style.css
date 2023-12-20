@@ -1,0 +1,150 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 10px #2F4238;
+  padding: 5px;
+}
+
+/** adpt content to the view point, now horizontal scroll bar */
+#content {
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#qrCodes {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+.form-control {
+  margin-bottom: 10px;
+}
+
+.form-control:hover {
+  background-color: #eee;
+  border: 1px solid #222121;
+  border-radius: 5px;
+}
+
+.form-control textarea {
+  width: 100%;
+  padding: 5px;
+}
+
+.form-control button {
+  width: 100%;
+  padding: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 5px;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 5px;
+}
+
+.form-group button:active {
+  background-color: #ccc;
+}
+
+.form-group button:focus {
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-group textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-group input:focus {
+  outline: none;
+}
+
+footer {
+  font-size: 14px;
+  color: #2a2929;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 50%;
+  text-transform: capitalize;
+}
+
+.disclaimer-text {
+  font-size: 12px;
+  color: #2a2929;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 50%;
+  text-transform: capitalize;
+}

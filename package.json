@@ -1,0 +1,40 @@
+{
+  "name": "QrCodOffice",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "author": "Dah-kenangnon",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "electron:generate-icons": "electron-icon-builder --input=./src/public/imgs/icons.png --output=build --flatten",
+    "deploy": "electron-builder -p always",
+    "self-sign": "electron-builder create-self-signed-cert --publisher \"JustineOffice\" ",
+    "package": "electron-builder --publish never",
+    "package:win": "electron-builder --win --publish never",
+    "package:linux": "electron-builder --linux --publish never",
+    "package:mac": "electron-builder --mac --publish never",
+    "package:all": "electron-builder --win --linux --mac --publish never",
+    "publish:all": "electron-builder --win --linux --mac -p  always",
+    "publish:win": "electron-builder --win -p always",
+    "postinstall": "electron-rebuild",
+    "release": "npm run deploy"
+  },
+  "dependencies": {
+    "electron-log": "^4.4.8",
+    "electron-is": "^3.0.0",
+    "electron-updater": "^6.1.7",
+    "qrcode": "^1.5.3"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "@electron/rebuild": "^3.2.13",
+    "chokidar": "^3.5.3",
+    "electron-builder": "^23.6.0",
+    "electron-icon-builder": "^2.0.1"
+  },
+  "productName": "QrCodOffice",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dahkenangnon/QrCodOffice"
+  }
+}
