@@ -1,5 +1,5 @@
 {
-  "name": "QrCodOffice",
+  "name": "TinyQrCode",
   "version": "1.0.0",
   "main": "src/main.js",
   "author": "Dah-kenangnon",
@@ -32,9 +32,9 @@
     "electron-builder": "^23.6.0",
     "electron-icon-builder": "^2.0.1"
   },
-  "productName": "QrCodOffice",
+  "productName": "TinyQrCode",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dahkenangnon/QrCodOffice"
+    "url": "https://github.com/Dahkenangnon/TinyQrCode"
   }
 }

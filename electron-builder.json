@@ -1,6 +1,6 @@
 {
   "appId": "com.dah-kenangnon.qr_cod_office",
-  "productName": "QrCodOffice",
+  "productName": "TinyQrCode",
   "directories": {
     "output": "build/output",
     "app": "./",
@@ -14,9 +14,7 @@
     {
       "provider": "github",
       "owner": "Dahkenangnon",
-      "repo": "QrCodOffice",
-      "private": true,
-      "token": "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"
+      "repo": "TinyQrCode"
     }
   ],
   "artifactName": "${productName}-${os}-${arch}-${version}.${ext}",
@@ -40,7 +38,7 @@
     "background": "build/img/bg.png",
     "icon": "build/icons/icon.icns",
     "iconSize": 100,
-    "title": "QrCodOffice",
+    "title": "TinyQrCode",
     "contents": [
       {
         "x": 410,
@@ -87,6 +85,6 @@
     ],
     "icon": "build/icons/512x512.png",
     "category": "Utility",
-    "executableName": "QrCodOffice"
+    "executableName": "TinyQrCode"
   }
 }
