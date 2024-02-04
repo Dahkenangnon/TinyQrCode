@@ -53,7 +53,7 @@ function createWindow() {
 
     mainWindow = new BrowserWindow({
         width: width - width * 0.3,
-        height: height ,
+        height: height,
         maxWidth: width - width * 0.3,
         maxHeight: height - height * 0.3,
         minHeight: height - height * 0.4,
@@ -64,6 +64,7 @@ function createWindow() {
         show: false,
         ELECTRON_ENABLE_SECURITY_WARNINGS: true,
         webPreferences: {
+            //devTools: !is.dev(),
             nodeIntegration: true,
             contextIsolation: false,
             preload: path.join(
@@ -72,7 +73,7 @@ function createWindow() {
             )
         }
     })
-
+// https://nfc.selys.app/{x1}/ui/{x2}
     mainWindow.setIcon(path.join(__dirname, 'public/imgs/icons.png'));
     mainWindow.loadFile(path.join(__dirname, 'public/index.html'));
 
@@ -111,7 +112,20 @@ function createWindow() {
     ipcMain.on('open-link', (event, link) => {
         shell.openExternal(link);
     });
+
+
+
+    // Deactivate user opening the dev tools
+    mainWindow.webContents.on('devtools-opened', () => {
+        //mainWindow.webContents.closeDevTools();
+    });
 }
+
+app.on('browser-window-created', (event, window) => {
+    window.webContents.on('will-prevent-unload', (event) => {
+        event.preventDefault();
+    });
+});
 
 
 app.whenReady().then(async () => {
@@ -119,6 +133,7 @@ app.whenReady().then(async () => {
     app.on('activate', async function () {
         if (BrowserWindow.getAllWindows().length === 0) createWindow();
     })
+
 })
 
 app.on('window-all-closed', function () {

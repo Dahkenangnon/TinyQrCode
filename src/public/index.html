@@ -6,38 +6,42 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div id="content">
-            <h1 class="text-center">QrCodOffice</h1>
-            <p class="text-center"><small>Vos Qr Code seront enregistré sous forme de fichiers .png</small></p>
-            <div>
-                <div class="form-group">
-                    <label for="startNumber">Préfixe Numérique</label>
-                    <p><small>Ce nombre est préfixé sur le nom des fichiers généré automatiquement et s'incrémente</small></p>
-                    <input class="form-control" name="startNumber" id="startNumber" type="number"
-                        placeholder="Start Number" value="1">
-                </div>
-                <div class="form-group">
-                    <label for="urlPattern">Schema du contenu à encoder</label>
-                    <p><small>Le {uid} est remplacé avant l'encodage dans le Qr Code. Il est remplacé par <em>chaque ligne</em> du champ ci-dessous.</small></p>
-                    <input class="form-control" name="urlPattern" id="urlPattern" type="text" placeholder="Url Pattern"
-                        value="https://nfc.selys.app/tags/{uid}">
-                </div>
-
-                <div class="form-group">
-                    <label for="cardUids">Listes des données à encoder</label>
-                    <p><small> Chaque <em>ligne de donnée</em> est remplacé dans le schema de contenu. Chaque donnée sur une seule ligne. Assurez-vous de ne pas avoir de ligne vide!</small></p>
-                    <textarea class="form-control" id="cardUids" rows="10" cols="50"
-                        placeholder="Enter card UIDs, each on a new line"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <button class="form-control" id="generateBtn">Génerer les codes</button>
-                </div>
-            </div>
-
-            <footer class="text-center">
-                (c) <a href="https://dah-kenangnon.com" id="authorLink">Justin Dah-kenangnon</a> - All right
-                reserved.
+        <div id="app">
+            <header>
+                <h1>QrCodOffice</h1>
+                <p class="header-p">Vos QR Code seront enregistrés sous forme de fichiers .png</p>
+                <p><small class="header-small">Pour des demandes de fonctionnalité,
+                     merci de visiter:  <a  class="externalLink"  href="https://dah-kenangnon.com">dah-kenangnon.com</a>
+                    </small></p>
+            </header>
+            <main id="content">
+                <section class="form-section">
+                    <div class="form-group">
+                        <label for="startNumber">Préfixe Numérique</label>
+                        <p><small>Ce nombre est préfixé sur le nom des fichiers généré automatiquement et
+                                s'incrémente</small></p>
+                        <input type="number" id="startNumber" placeholder="Start Number" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="urlPattern">Schema du contenu à encoder</label>
+                        <p><small>Le {code} est remplacé avant l'encodage dans le Qr Code. Il est remplacé par <em>chaque
+                                    ligne</em> du champ ci-dessous.</small></p>
+                        <input type="text" id="urlPattern" placeholder="Url Pattern"
+                            value="{code}">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardUids">Listes des données à encoder</label>
+                        <p><small>Chaque <em>ligne de donnée</em> est remplacé dans le schema de contenu. Chaque donnée
+                                sur une seule ligne. Assurez-vous de ne pas avoir de ligne vide!</small></p>
+                        <textarea id="cardUids" rows="10" placeholder="Enter card UIDs, each on a new line"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button id="generateBtn">Génerer les codes</button>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                (c) <a href="https://dah-kenangnon.com" class="externalLink">Justin Dah-kenangnon</a> - All rights reserved.
                 <p class="disclaimer-text">This software has no warranty. Use at your own risk.</p>
             </footer>
         </div>
